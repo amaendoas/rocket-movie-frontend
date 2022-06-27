@@ -5,4 +5,9 @@ export const Container = styled.button`
   height: 56px;
   background: ${({theme}) => theme.COLORS.PINK};
   border-radius: 10px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
 `;

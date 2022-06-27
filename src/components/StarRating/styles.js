@@ -6,6 +6,6 @@ export const Container = styled.div`
   }
 
   .star {
-    font-size: 25px;
+    font-size: 20px;
   }
 `

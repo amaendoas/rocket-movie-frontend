@@ -43,6 +43,8 @@ export const Content = styled.div`
       line-height: 21px;
       text-align: justify;
     }
+
+    
 `
 
 export const Title = styled.div`
