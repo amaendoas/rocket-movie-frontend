@@ -7,6 +7,20 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: ${({theme}) => theme.COLORS.PINK};
+    border-radius: 20px;
+    border: none; 
+  }
+
   body {
     background: ${({theme}) => theme.COLORS.BACKGROUND_800};
     color: ${({theme}) => theme.COLORS.WHITE_100};

@@ -8,8 +8,8 @@ export function Header() {
       <Input placeholder="Pesquisar por Título" />
       <Profile>
       <div>
-      <h3>Amanda Guerra</h3>
-      <a href="#">sair</a>
+        <h3>Amanda Guerra</h3>
+        <a href="#">sair</a>
       </div>
       <img src="https://github.com/amaendoas.png" alt="" />
       </Profile>

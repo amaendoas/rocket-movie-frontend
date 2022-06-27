@@ -11,6 +11,7 @@ export default {
     WHITE_100: "#F4EDE8",
     WHITE_200: "#E5E5E5",
     PINK: "#FF859B",
+    PINK_BG: "hsla(349, 100%, 76%, 0.05)",
 
     GRAY_100: "#999591",
     GRAY_200: "#948F99",
