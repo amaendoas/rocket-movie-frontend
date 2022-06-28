@@ -10,8 +10,8 @@ export const Container = styled.div`
 
   main {
     grid-area: content;
-    overflow-y: auto;
     padding: 40px 0;
+    overflow-y: auto;
   }
 `
 
