@@ -1,9 +1,10 @@
 import { Container, Content, Title, Info} from "./styles";
 import { Header } from "../../components/Header";
 import { BiArrowBack } from "react-icons/bi"
-import { Tag } from "../../components/Tags";
+import { Tag } from "../../components/Tag";
 import { StarRating } from "../../components/StarRating";
 import { FiClock } from "react-icons/fi"
+import { ButtonText } from "../../components/ButtonText";
 
 export function Movies() {
   return (
@@ -11,7 +12,7 @@ export function Movies() {
       <Header/>
       <main>
         <Content>
-          <a href="/"><BiArrowBack/>Voltar</a>
+          <ButtonText title="Voltar" icon={BiArrowBack}/>
           <Title>
             <h1>Interestellar</h1>
             <StarRating value="4" />

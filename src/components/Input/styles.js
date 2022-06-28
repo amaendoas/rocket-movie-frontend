@@ -10,11 +10,13 @@ export const Container = styled.div`
   gap: 10px;
   padding: 20px;
   height: 56px;
+  margin-bottom: 8px;
 
   input {
     background: transparent;
     width: 100%;
     border: none;
+    color: ${({theme}) => theme.COLORS.WHITE_100};
   }
   
   &::placeholder {

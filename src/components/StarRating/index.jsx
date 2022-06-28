@@ -13,6 +13,7 @@ export function StarRating({value = 0, ...rest}) {
         className="star"
         color={ratingValue <= (value) ? "#FF859B" : "#312E38"}
         />
+
         <input
         type="radio"
         name="radio"
@@ -25,3 +26,5 @@ export function StarRating({value = 0, ...rest}) {
     </Container>
   )
 }
+
+// {ratingValue <= (value) ? "#FF859B" : "#312E38"}
