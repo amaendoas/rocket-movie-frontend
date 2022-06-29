@@ -1,4 +1,5 @@
 import { BackgroundImg, Container, Form } from "./styles";
+import { Link } from 'react-router-dom'
 import { Input } from "../../components/Input";
 import { FiMail, FiLock } from "react-icons/fi";
 import { Button } from "../../components/Button";
@@ -17,7 +18,9 @@ export function SignIn() {
 
         <Button title="Entrar"/>
 
-        <ButtonText title="Criar Conta"/>
+        <Link to="/register">
+          <ButtonText title="Criar Conta"/>
+        </Link>
       </Form>
       <BackgroundImg/>
 

@@ -1,4 +1,5 @@
 import { Container, Content, Title, Section } from "./styles";
+import { Link } from 'react-router-dom'
 import { Header } from "../../components/Header"
 import { Button } from "../../components/Button"
 import { AiOutlinePlus } from "react-icons/ai"
@@ -13,7 +14,9 @@ export function Home(){
         <Content>
           <Title>
           <h1>Meus filmes</h1>
+          <Link to='new'> 
           <Button title="Adicionar filme" icon={AiOutlinePlus}/>
+          </Link>
           </Title>
         <Section>
             <h1>Interstellar</h1>

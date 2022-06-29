@@ -1,4 +1,5 @@
 import { Container, Form } from "./styles";
+import { Link } from 'react-router-dom'
 import { Header } from "../../components/Header";
 import { Button } from '../../components/Button';
 import { ButtonText } from "../../components/ButtonText";
@@ -13,7 +14,9 @@ export function New() {
       <Header/>
       <main>
         <Form>
+          <Link to='/'>
           <ButtonText title="Voltar" icon={FiArrowLeft}/>
+          </Link>
           <h1>Novo filme</h1>
           <div className="title">
             <Input type="text" placeholder="Título"/>

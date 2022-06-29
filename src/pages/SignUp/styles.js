@@ -6,14 +6,13 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   align-items: stretch;
-  grid-template-columns: 640px auto;
+  grid-template-columns: auto 640px;
   grid-template-rows: 100%;
-  grid-template-areas: "content" "img";
+  grid-template-areas: "img" "content";
 `
 
 export const Form = styled.form`
-  grid-area: content;
-  width: 340px;
+  max-width: 340px;
   height: 100%;
   display: flex;
   margin: 0 auto;

@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   grid-area: content;
-  width: 340px;
+  max-width: 340px;
   height: 100%;
   display: flex;
   margin: 0 auto;

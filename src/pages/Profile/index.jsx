@@ -1,4 +1,5 @@
 import { Container, Form, Avatar } from "./styles";
+import { Link } from 'react-router-dom';
 import { BiArrowBack } from "react-icons/bi";
 import { ButtonText } from "../../components/ButtonText"
 import { Input } from "../../components/Input" 
@@ -10,7 +11,9 @@ export function Profile() {
   return(
     <Container>
       <header>
-      <ButtonText title="Voltar" icon={BiArrowBack}/>
+        <Link to='/'>
+          <ButtonText title="Voltar" icon={BiArrowBack}/>
+        </Link>
       </header>
         <Form>
           <Avatar>

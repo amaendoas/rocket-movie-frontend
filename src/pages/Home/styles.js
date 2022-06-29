@@ -18,6 +18,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0 50px;
 `
 
 export const Title = styled.div`
@@ -37,19 +38,22 @@ export const Title = styled.div`
   }
 `
 
-export const Section = styled.div`
+export const Section = styled.button`
   border-radius: 10px;
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
   padding: 32px;
   background-color: ${({theme}) => theme.COLORS.PINK_BG};
   margin-bottom: 24px;
+  border: none;
 
   h1 {
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
+    color: ${({theme}) => theme.COLORS.WHITE};
   }
   .details {
       font-weight: 400;
@@ -61,6 +65,11 @@ export const Section = styled.div`
         max-height: 5ch;
         text-overflow: ellipsis;
         overflow: hidden;
+        color: ${({theme}) => theme.COLORS.GRAY_100};
         }
+    }
+
+    .tags {
+      margin-top: 10px;
     }
 `

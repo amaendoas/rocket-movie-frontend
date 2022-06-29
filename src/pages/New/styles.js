@@ -17,6 +17,7 @@ export const Container = styled.div`
 export const Form = styled.form`
     max-width: 1300px;
     margin: 0 auto;
+    padding: 0 50px;
 
   h1 {
     margin: 24px 0 40px 0;
