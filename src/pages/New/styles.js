@@ -55,6 +55,7 @@ export const Form = styled.form`
     width: 100%;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
   }
 

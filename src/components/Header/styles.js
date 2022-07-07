@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 64px;
   position: relative;
   border-bottom: 1px solid ${({theme}) => theme.COLORS.BACKGROUND_500};
@@ -48,6 +49,7 @@ export const Profile = styled(Link)`
   img {
     width: 64px;
     height: 64px;
+    object-fit: cover;
     border-radius: 50%;
     border: 1px solid ${({theme}) => theme.COLORS.BACKGROUND_500};
   }

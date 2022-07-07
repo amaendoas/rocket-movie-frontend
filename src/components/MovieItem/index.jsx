@@ -9,6 +9,7 @@ export function MovieItem({isNew, value, onClick, ...rest}) {
       type="text"
       value={value}
       readOnly={!isNew}
+      {...rest}
       />
       <button
       type='button'

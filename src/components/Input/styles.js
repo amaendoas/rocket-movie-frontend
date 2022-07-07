@@ -10,7 +10,6 @@ export const Container = styled.div`
   gap: 10px;
   padding: 20px;
   height: 56px;
-  margin-bottom: 8px;
 
   input {
     background: transparent;

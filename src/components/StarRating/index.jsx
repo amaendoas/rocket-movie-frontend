@@ -10,6 +10,7 @@ export function StarRating({value = 0, ...rest}) {
         return(
         <label>
         <MdStar
+        key={String(i)}
         className="star"
         color={ratingValue <= (value) ? "#FF859B" : "#312E38"}
         />
@@ -18,6 +19,7 @@ export function StarRating({value = 0, ...rest}) {
         type="radio"
         name="radio"
         value={value}
+        {...rest}
         />
         </label>
         )

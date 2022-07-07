@@ -24,17 +24,19 @@ export const Content = styled.div`
 export const Title = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 40px;
+  gap: 15px;
 
   > h1 {
     font-weight: 400;
     font-size: 32px;
     line-height: 42px;
+    width: 300px;
   }
 
   button {
-    width: fit-content;
+    width: 207px;
   }
 `
 
@@ -69,7 +71,7 @@ export const Section = styled.button`
         }
     }
 
-    .tags {
+    footer {
       margin-top: 10px;
     }
 `
