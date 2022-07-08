@@ -31,6 +31,9 @@ export const Form = styled.form`
   max-width: 340px;
   margin: -84px auto 0;
 
+  > div:nth-child(1) {
+    margin-bottom: 44px;
+  }
   > div:nth-child(4) {
     margin-top: 24px;
   }
@@ -39,11 +42,15 @@ export const Form = styled.form`
     margin-top: 24px;
   }
 
+  > div {
+    margin-bottom: 8px;
+  }
+
 `
 
 export const Avatar = styled.div`
   position: relative;
-  margin: 0 auto 44px;
+  margin: 0 auto;
   width: 186px;
   height: 186px;
 

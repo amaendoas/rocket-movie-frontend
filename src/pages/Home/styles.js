@@ -24,8 +24,8 @@ export const Content = styled.div`
 export const Title = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  margin-bottom: 10px;
   gap: 15px;
 
   > h1 {
@@ -38,6 +38,12 @@ export const Title = styled.div`
   button {
     width: 207px;
   }
+`
+
+export const Search = styled.div`
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
 `
 
 export const Section = styled.button`

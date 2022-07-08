@@ -26,23 +26,33 @@ export const Content = styled.div`
       border-radius: 50%;
     }
 
-    a {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: ${({theme}) => theme.COLORS.PINK};
-    }
-
-    a svg {
-      font-size: 16px;
-    }
-
     .details {
       margin-top: 40px;
       font-weight: 400;
       font-size: 16px;
       line-height: 21px;
       text-align: justify;
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: ${({theme}) => theme.COLORS.PINK};
+      }
+
+      a svg {
+      font-size: 16px;
+      }
+
+      a:nth-child(2){
+        color: ${({theme}) => theme.COLORS.GRAY_200};
+      }
+
     }
 
     
