@@ -38,7 +38,7 @@ export const Form = styled.form`
     margin-top: 24px;
   }
 
-  > button {
+  .buttons {
     margin-top: 24px;
   }
 

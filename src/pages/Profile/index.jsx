@@ -1,5 +1,5 @@
 import { Container, Form, Avatar } from "./styles";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { BiArrowBack } from "react-icons/bi";
 import { ButtonText } from "../../components/ButtonText";
 import { Input } from "../../components/Input"; 
@@ -10,9 +10,12 @@ import { useState } from "react";
 import { useAuth } from "../../hooks/auth";
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 export function Profile() {
-  const { user, updateProfile } = useAuth();
+  const { user, updateProfile, signOut } = useAuth();
+
+  const navigate = useNavigate();
 
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
@@ -24,14 +27,17 @@ export function Profile() {
   const [avatarFile, setAvatarFile] = useState(null);
 
   async function handleUpdate() {
-    const user = {
+    const updated = {
       name,
       email,
       password: passwordNew,
       old_password: passwordOld
     }
 
-    await updateProfile({ user, avatarFile });
+    const userUpdated = Object.assign(user, updated);
+
+    await updateProfile({ user: userUpdated, avatarFile });
+    navigate("/")
   }
 
   function handleChangeAvatar(event) {
@@ -41,6 +47,17 @@ export function Profile() {
     const imagePreview = URL.createObjectURL(file);
     setAvatar(imagePreview);
 
+  }
+
+  async function handleDeleteAccount() {
+    const confirm = window.confirm("Deseja realmente apagar sua conta?")
+    
+    if(confirm) {
+      await api.delete("/users", {id: user.id})
+      alert("Conta Deletada com sucesso")
+      signOut()
+      navigate("/")
+    }
   }
 
 
@@ -90,7 +107,10 @@ export function Profile() {
           type="password"
           icon={FiLock}
           />
-          <Button title="Salvar" onClick={handleUpdate}/>
+          <div className="buttons">
+            <Button title="Salvar" onClick={handleUpdate}/>
+            <Button blackButton title="Deletar Conta" onClick={handleDeleteAccount}/>
+          </div>
         </Form>
     </Container>
   )

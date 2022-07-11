@@ -43,6 +43,10 @@ export const Form = styled.form`
     margin: 48px 0 32px;
   }
 
+  div {
+    margin-bottom: 8px;
+  }
+
   button {
     margin: 24px 0 32px;
   }

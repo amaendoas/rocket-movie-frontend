@@ -7,10 +7,11 @@ export const Container = styled.button`
   border: none;
   padding: 0 20px;
   display: flex;
+  margin-bottom: 8px;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  background: ${({theme}) => theme.COLORS.PINK};
-  color: ${({theme}) => theme.COLORS.BACKGROUND_800};
+  background: ${({theme, blackButton}) => blackButton ? theme.COLORS.BACKGROUND_900 : theme.COLORS.PINK};
+  color: ${({theme, blackButton}) => blackButton ? theme.COLORS.PINK : theme.COLORS.BACKGROUND_800};
   font-size: 16px;
 `;

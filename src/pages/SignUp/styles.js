@@ -28,6 +28,10 @@ export const Form = styled.form`
     color: ${({theme}) => theme.COLORS.PINK};
   }
 
+  div {
+    margin-bottom: 8px;
+  }
+
   p {
     font-weight: 400;
     font-size: 14px;

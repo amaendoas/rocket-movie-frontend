@@ -12,7 +12,7 @@ export const Container = styled.div`
   border-bottom: 1px solid ${({theme}) => theme.COLORS.BACKGROUND_500};
   padding: 24px 123px;
 
-  > h1 {
+  > a > h1 {
     color: ${({theme}) => theme.COLORS.PINK};
     font-size: 24px;
   }

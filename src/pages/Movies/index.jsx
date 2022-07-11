@@ -12,12 +12,15 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../../services/api";
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg"
+import { useNavigate } from "react-router-dom";
 
 export function Movies() {
   const [data, setData] = useState({});
   const params = useParams();
   const { user } = useAuth();
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
+ const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchNote() {
@@ -38,7 +41,7 @@ export function Movies() {
             <Link to="/">
               <ButtonText title="Voltar" icon={BiArrowBack}/>
             </Link>
-            <Link to="/new">Editar Filme</Link>
+            <Link to={`/edit/${data.id}`}>Editar Filme</Link>
           </div>
           <Title>
             <h1>{data.title}</h1>

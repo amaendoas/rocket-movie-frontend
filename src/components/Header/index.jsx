@@ -1,11 +1,9 @@
 import { Container, Profile} from "./styles";
-import { Input } from "../Input";
 import { Link } from 'react-router-dom';
 
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
-import  { useEffect, useState } from "react";
 
 
 export function Header() {
@@ -15,7 +13,9 @@ export function Header() {
 
   return (
     <Container>
-      <h1>RocketMovie</h1>
+      <Link to="/">
+      <h1>RocketMovies</h1>
+      </Link>
       <Profile to='/profile'>
         <div>
           <h3>{user.name}</h3>

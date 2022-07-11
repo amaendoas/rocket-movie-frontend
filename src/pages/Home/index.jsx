@@ -53,14 +53,12 @@ export function Home(){
               <Button title="Adicionar filme" icon={AiOutlinePlus}/>
             </Link>
           </Title>
-
           <Search>
           <Input
             placeholder="Pesquisar por Título"
             onChange={e => setSearch(e.target.value)}
             />
           </Search>
-
           {
             notes.map(note => (
             <Section
