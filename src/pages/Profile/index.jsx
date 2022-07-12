@@ -52,13 +52,21 @@ export function Profile() {
   async function handleDeleteAccount() {
     const confirm = window.confirm("Deseja realmente apagar sua conta?")
     
-    if(confirm) {
-      await api.delete("/users", {id: user.id})
-      alert("Conta Deletada com sucesso")
-      signOut()
-      navigate("/")
+    try {
+      if(confirm) {
+        await api.delete("/users", {id: user.id})
+        alert("Conta Deletada com sucesso")
+        signOut()
+        navigate("/")
+      }
+    } catch(error){
+        if(error.response) {
+          alert(error.response.data.message)
+        } else {
+          alert("Não foi possível deletar sua conta.")
+        }
+      }
     }
-  }
 
 
   return(
